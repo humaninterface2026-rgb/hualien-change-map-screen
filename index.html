@@ -37208,7 +37208,8 @@ void main() {
  *
  * A "dynamic presentation" of the county's 硬底子 seven categories (CONTRACT_JH §5):
  *   overview  — the v3 map + a row of seven category plaque-cards (animals only as small accents)
- *   category  — right panel (phone: bottom sheet): 大標, 簡報原文, 細項 (expandable, listing each 建設), 開始導覽
+ *   category  — right panel (phone: bottom sheet): 大標, the deck's category name (no 簡報原文 tag: the user removed it on
+ *               2026-11-12), 細項 (expandable, listing each 建設), 開始導覽
  *   tour      — one station per 建設 in HL.data.tourOrder[cat]: stop letter / progress, 展覽標題, name, keyword chips,
  *               description (red-text runs emphasised), swipeable photos + lightbox (no photo credit line: the user removed it on 2026-11-11), 業管局處 only,
  *               prev / next / autoplay / exit, ← → Esc Space.
@@ -37836,7 +37837,7 @@ void main() {
           <div class="jh-hd-k"><span>硬底子 第 ${i + 1} 類 ／ 7</span>
             <span class="jh-hd-nav"><button type="button" class="jh-sq" data-act="catPrev" aria-label="上一類" title="上一類（←）">${ico('chevL', 18)}</button><button type="button" class="jh-sq" data-act="catNext" aria-label="下一類" title="下一類（→）">${ico('chevR', 18)}</button><button type="button" class="jh-sq" data-act="overview" aria-label="回全縣總覽" title="回全縣總覽（Esc）">${ico('close', 18)}</button></span></div>
           <h2 class="jh-hd-t">${esc(this.catTitle(c))}</h2>
-          <p class="jh-hd-s"><small>簡報原文</small>${esc(c.deckName || '')}</p>
+          <p class="jh-hd-s">${esc(c.deckName || '')}</p>
           <p class="jh-hd-n"><span><b>${subs.length}</b> 細項</span><span><b>${list.length}</b> 項建設</span></p>
           ${art ? `<span class="jh-hd-mk" data-mk="${esc(c.mascotKey)}">${art}</span>` : ''}
         </header>
